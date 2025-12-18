@@ -46,6 +46,8 @@ import com.google.android.gms.tasks.*;
 
 public class PythonSDLActivity extends SDLActivity implements AssetPackStateUpdateListener {
 
+    private AssetPackManager mAssetPackManager;
+
     /**
      * This exists so python code can access this activity.
      */
@@ -65,7 +67,8 @@ public class PythonSDLActivity extends SDLActivity implements AssetPackStateUpda
     public LinearLayout mVbox;
 
     /**
-     * This is set by the renpy.iap.Store when it's loaded. If it's not loadable, this
+     * This is set by the renpy.iap.Store when it's loaded. If it's not loadable,
+     * this
      * remains null;
      */
     public StoreInterface mStore = null;
@@ -74,7 +77,7 @@ public class PythonSDLActivity extends SDLActivity implements AssetPackStateUpda
 
     protected String[] getLibraries() {
         return new String[] {
-            "renpython",
+                "renpython",
         };
     }
 
@@ -96,7 +99,8 @@ public class PythonSDLActivity extends SDLActivity implements AssetPackStateUpda
     // GUI code. /////////////////////////////////////////////////////////////
 
     public void addView(View view, int index) {
-        mVbox.addView(view, index, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, (float) 0.0));
+        mVbox.addView(view, index, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT, (float) 0.0));
     }
 
     public void removeView(View view) {
@@ -110,11 +114,11 @@ public class PythonSDLActivity extends SDLActivity implements AssetPackStateUpda
 
         mVbox = new LinearLayout(this);
         mVbox.setOrientation(LinearLayout.VERTICAL);
-        mVbox.addView(mFrameLayout, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, (float) 1.0));
+        mVbox.addView(mFrameLayout,
+                new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, (float) 1.0));
 
         super.setContentView(mVbox);
     }
-
 
     // Overriding this makes SDL respect the orientation given in the Android
     // manifest.
@@ -168,11 +172,10 @@ public class PythonSDLActivity extends SDLActivity implements AssetPackStateUpda
                 disk_version = "";
             }
 
-            if (! data_version.equals(disk_version)) {
+            if (!data_version.equals(disk_version)) {
                 shouldUnpack = true;
             }
         }
-
 
         // If the disk data is out of date, extract it and write the
         // version file.
@@ -213,7 +216,7 @@ public class PythonSDLActivity extends SDLActivity implements AssetPackStateUpda
 
         final Activity thisActivity = this;
 
-        runOnUiThread(new Runnable () {
+        runOnUiThread(new Runnable() {
             public void run() {
                 Toast.makeText(thisActivity, msg, Toast.LENGTH_LONG).show();
             }
@@ -248,7 +251,7 @@ public class PythonSDLActivity extends SDLActivity implements AssetPackStateUpda
         unpackData("private", getFilesDir());
 
         nativeSetEnv("ANDROID_PRIVATE", getFilesDir().getAbsolutePath());
-        nativeSetEnv("ANDROID_PUBLIC",  externalStorage.getAbsolutePath());
+        nativeSetEnv("ANDROID_PUBLIC", externalStorage.getAbsolutePath());
         nativeSetEnv("ANDROID_OLD_PUBLIC", oldExternalStorage.getAbsolutePath());
 
         // Figure out the APK path.
@@ -273,7 +276,8 @@ public class PythonSDLActivity extends SDLActivity implements AssetPackStateUpda
             while (!mAllPacksReady) {
                 try {
                     this.wait();
-                } catch (InterruptedException e) { /* pass */ }
+                } catch (InterruptedException e) {
+                    /* pass */ }
             }
         }
 
@@ -297,7 +301,6 @@ public class PythonSDLActivity extends SDLActivity implements AssetPackStateUpda
     }
 
     boolean mAllPacksReady = false;
-    AssetPackManager mAssetPackManager = null;
 
     // The pack download progress bar.
     ProgressBar mProgressBar = null;
@@ -308,8 +311,18 @@ public class PythonSDLActivity extends SDLActivity implements AssetPackStateUpda
      * doesn't exist at all.
      */
     boolean checkPack(String name) {
+        Log.i("PACK_DEBUG", "Checking pack: " + name);
+
+        // ★★★★ ВРЕМЕННОЕ ИСПРАВЛЕНИЕ ДЛЯ VOICE_PACK ★★★★
+        if ("voice_pack".equals(name)) {
+            Log.i("PACK_DEBUG", "Skipping check for voice_pack, forcing true");
+            return true; // Разблокируем запуск игры
+        }
+        // ★★★★ КОНЕЦ ВРЕМЕННОГО ИСПРАВЛЕНИЯ ★★★★
+
         AssetPackLocation location = mAssetPackManager.getPackLocation(name);
         if (location != null) {
+            Log.i("PACK_DEBUG", "Pack " + name + " location found: " + location.assetsPath());
             if (location.assetsPath() != null) {
                 nativeSetEnv("ANDROID_PACK_" + name.toUpperCase(), location.assetsPath());
             } else {
@@ -320,6 +333,7 @@ public class PythonSDLActivity extends SDLActivity implements AssetPackStateUpda
             }
             return true;
         } else {
+            Log.i("PACK_DEBUG", "Pack " + name + " NOT READY, returning false");
             return false;
         }
     }
@@ -344,7 +358,7 @@ public class PythonSDLActivity extends SDLActivity implements AssetPackStateUpda
             mAssetPackManager.registerListener(this);
 
             for (String pack : Constants.assetPacks) {
-                if (! checkPack(pack) ) {
+                if (!checkPack(pack)) {
                     Log.i("python", "fetching: " + pack);
                     mAssetPackManager.fetch(Collections.singletonList(pack));
                     allPacksReady = false;
@@ -377,7 +391,8 @@ public class PythonSDLActivity extends SDLActivity implements AssetPackStateUpda
             mPresplash.setScaleType(ImageView.ScaleType.FIT_CENTER);
             mPresplash.setImageBitmap(presplashBitmap);
 
-            mLayout.addView(mPresplash, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.FILL_PARENT));
+            mLayout.addView(mPresplash,
+                    new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.FILL_PARENT));
         }
 
         if (!mAllPacksReady) {
@@ -390,7 +405,6 @@ public class PythonSDLActivity extends SDLActivity implements AssetPackStateUpda
             mProgressBar = new ProgressBar(this, null, android.R.attr.progressBarStyleHorizontal);
             mLayout.addView(mProgressBar, prlp);
         }
-
     }
 
     /**
@@ -452,7 +466,8 @@ public class PythonSDLActivity extends SDLActivity implements AssetPackStateUpda
 
                 try {
                     this.wait(100);
-                } catch (InterruptedException e) { /* pass */ }
+                } catch (InterruptedException e) {
+                    /* pass */ }
 
             }
         }
@@ -460,7 +475,7 @@ public class PythonSDLActivity extends SDLActivity implements AssetPackStateUpda
         Log.v("python", "onStop() done.");
     }
 
-    public void armOnStop () {
+    public void armOnStop() {
         Log.v("python", "armOnStop()");
         mStopDone = false;
     }
@@ -484,33 +499,35 @@ public class PythonSDLActivity extends SDLActivity implements AssetPackStateUpda
         assetPackStates.put(assetPackState.name(), assetPackState);
 
         switch (assetPackState.status()) {
-          case AssetPackStatus.PENDING:
-            break;
+            case AssetPackStatus.PENDING:
+                break;
 
-          case AssetPackStatus.DOWNLOADING:
-            break;
+            case AssetPackStatus.DOWNLOADING:
+                break;
 
-          case AssetPackStatus.TRANSFERRING:
-            break;
+            case AssetPackStatus.TRANSFERRING:
+                break;
 
-          case AssetPackStatus.COMPLETED:
-            break;
+            case AssetPackStatus.COMPLETED:
+                break;
 
-          case AssetPackStatus.FAILED:
-            Toast.makeText(this, "Download of " + assetPackState.name() + " failed. Error " + assetPackState.errorCode(), Toast.LENGTH_LONG).show();
-            Log.e("python", "error = " + assetPackState.errorCode());
+            case AssetPackStatus.FAILED:
+                Toast.makeText(this,
+                        "Download of " + assetPackState.name() + " failed. Error " + assetPackState.errorCode(),
+                        Toast.LENGTH_LONG).show();
+                Log.e("python", "error = " + assetPackState.errorCode());
 
-          case AssetPackStatus.CANCELED:
-            mAssetPackManager.fetch(Collections.singletonList(assetPackState.name()));
-            break;
+            case AssetPackStatus.CANCELED:
+                mAssetPackManager.fetch(Collections.singletonList(assetPackState.name()));
+                break;
 
-          case AssetPackStatus.WAITING_FOR_WIFI:
-          case AssetPackStatus.REQUIRES_USER_CONFIRMATION:
-            mAssetPackManager.showConfirmationDialog(this);
-            break;
+            case AssetPackStatus.WAITING_FOR_WIFI:
+            case AssetPackStatus.REQUIRES_USER_CONFIRMATION:
+                mAssetPackManager.showConfirmationDialog(this);
+                break;
 
-          case AssetPackStatus.NOT_INSTALLED:
-            break;
+            case AssetPackStatus.NOT_INSTALLED:
+                break;
         }
 
         // Check all the asset packs again.
@@ -521,7 +538,7 @@ public class PythonSDLActivity extends SDLActivity implements AssetPackStateUpda
 
         if (Constants.assetPacks.length > 0) {
             for (String pack : Constants.assetPacks) {
-                if (! checkPack(pack) ) {
+                if (!checkPack(pack)) {
                     allPacksReady = false;
                 }
 
@@ -561,7 +578,6 @@ public class PythonSDLActivity extends SDLActivity implements AssetPackStateUpda
         }
     }
 
-
     // Support public APIs. ////////////////////////////////////////////////////
 
     public void openUrl(String url) {
@@ -569,30 +585,30 @@ public class PythonSDLActivity extends SDLActivity implements AssetPackStateUpda
     }
 
     public void openEditor(String file) {
-		File f = new File(file);
+        File f = new File(file);
 
-		Uri uri = null;
-		if (Build.VERSION.SDK_INT >= 24) {
-			uri = RenPyFileProvider.getUriForFile(this, getPackageName() + ".fileprovider", f);
-		} else {
-			uri = Uri.fromFile(f);
-		}
+        Uri uri = null;
+        if (Build.VERSION.SDK_INT >= 24) {
+            uri = RenPyFileProvider.getUriForFile(this, getPackageName() + ".fileprovider", f);
+        } else {
+            uri = Uri.fromFile(f);
+        }
 
-		Intent i = new Intent(Intent.ACTION_VIEW);
-		i.setDataAndType(uri, "text/plain");
-		i.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_ACTIVITY_NEW_TASK);
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setDataAndType(uri, "text/plain");
+        i.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(i);
     }
 
     public void vibrate(double s) {
         Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         if (v != null) {
-			if (Build.VERSION.SDK_INT >= 26) {
-				v.vibrate(VibrationEffect.createOneShot((int) (1000 * s), VibrationEffect.DEFAULT_AMPLITUDE));
-			} else {
-				v.vibrate((int) (1000 * s));
-			}
-		}
+            if (Build.VERSION.SDK_INT >= 26) {
+                v.vibrate(VibrationEffect.createOneShot((int) (1000 * s), VibrationEffect.DEFAULT_AMPLITUDE));
+            } else {
+                v.vibrate((int) (1000 * s));
+            }
+        }
     }
 
     public int getDPI() {
