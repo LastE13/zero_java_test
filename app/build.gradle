@@ -12,10 +12,10 @@ localProperties.load(new FileInputStream(localPropertiesFile))
 android {
     compileSdkVersion 35
 
-    namespace "com.saicono.tb"
+    namespace "z.z.z"
 
     defaultConfig {
-        applicationId "com.saicono.tb"
+        applicationId "z.z.z"
         minSdkVersion 21
         targetSdkVersion 35
         versionCode 1765897111
