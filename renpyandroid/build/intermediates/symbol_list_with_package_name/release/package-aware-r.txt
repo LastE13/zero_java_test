@@ -1,0 +1,3 @@
+org.renpy.android
+string app_name
+xml file_paths
