@@ -1,0 +1,19 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+
+include ':renpyiap', ':renpyandroid', ':app', ':ff1', ':ff2', ':ff3', ':ff4', ":voice_pack" 
+
+rootProject.name="app"

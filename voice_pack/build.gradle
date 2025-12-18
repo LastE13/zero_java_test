@@ -1,0 +1,12 @@
+// In the asset pack’s build.gradle file:
+plugins {
+    id 'com.android.asset-pack'
+}
+
+
+assetPack {
+    packName = "voice_pack" // Directory name for the asset pack
+    dynamicDelivery {
+        deliveryType = "fast-follow"
+    }
+}
