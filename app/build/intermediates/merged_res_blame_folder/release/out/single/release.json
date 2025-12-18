@@ -1,0 +1,70 @@
+[
+    {
+        "merged": "z.z.z.app-merged_res-18:/mipmap-hdpi_icon_background.png.flat",
+        "source": "z.z.z.app-main-19:/mipmap-hdpi/icon_background.png"
+    },
+    {
+        "merged": "z.z.z.app-merged_res-18:/mipmap-xxxhdpi_icon_foreground.png.flat",
+        "source": "z.z.z.app-main-19:/mipmap-xxxhdpi/icon_foreground.png"
+    },
+    {
+        "merged": "z.z.z.app-merged_res-18:/mipmap-xxhdpi_icon_background.png.flat",
+        "source": "z.z.z.app-main-19:/mipmap-xxhdpi/icon_background.png"
+    },
+    {
+        "merged": "z.z.z.app-merged_res-18:/mipmap-xhdpi_icon_background.png.flat",
+        "source": "z.z.z.app-main-19:/mipmap-xhdpi/icon_background.png"
+    },
+    {
+        "merged": "z.z.z.app-merged_res-18:/mipmap-mdpi_icon.png.flat",
+        "source": "z.z.z.app-main-19:/mipmap-mdpi/icon.png"
+    },
+    {
+        "merged": "z.z.z.app-merged_res-18:/mipmap-xxxhdpi_icon.png.flat",
+        "source": "z.z.z.app-main-19:/mipmap-xxxhdpi/icon.png"
+    },
+    {
+        "merged": "z.z.z.app-merged_res-18:/mipmap-xhdpi_icon_foreground.png.flat",
+        "source": "z.z.z.app-main-19:/mipmap-xhdpi/icon_foreground.png"
+    },
+    {
+        "merged": "z.z.z.app-merged_res-18:/mipmap-anydpi-v26_icon.xml.flat",
+        "source": "z.z.z.app-main-19:/mipmap-anydpi-v26/icon.xml"
+    },
+    {
+        "merged": "z.z.z.app-merged_res-18:/mipmap-hdpi_icon.png.flat",
+        "source": "z.z.z.app-main-19:/mipmap-hdpi/icon.png"
+    },
+    {
+        "merged": "z.z.z.app-merged_res-18:/mipmap-xxhdpi_icon.png.flat",
+        "source": "z.z.z.app-main-19:/mipmap-xxhdpi/icon.png"
+    },
+    {
+        "merged": "z.z.z.app-merged_res-18:/mipmap-xhdpi_icon.png.flat",
+        "source": "z.z.z.app-main-19:/mipmap-xhdpi/icon.png"
+    },
+    {
+        "merged": "z.z.z.app-merged_res-18:/mipmap-xxxhdpi_icon_background.png.flat",
+        "source": "z.z.z.app-main-19:/mipmap-xxxhdpi/icon_background.png"
+    },
+    {
+        "merged": "z.z.z.app-merged_res-18:/mipmap-mdpi_icon_foreground.png.flat",
+        "source": "z.z.z.app-main-19:/mipmap-mdpi/icon_foreground.png"
+    },
+    {
+        "merged": "z.z.z.app-merged_res-18:/mipmap-mdpi_icon_background.png.flat",
+        "source": "z.z.z.app-main-19:/mipmap-mdpi/icon_background.png"
+    },
+    {
+        "merged": "z.z.z.app-merged_res-18:/mipmap-xxhdpi_icon_foreground.png.flat",
+        "source": "z.z.z.app-main-19:/mipmap-xxhdpi/icon_foreground.png"
+    },
+    {
+        "merged": "z.z.z.app-merged_res-18:/xml_backup.xml.flat",
+        "source": "z.z.z.app-main-19:/xml/backup.xml"
+    },
+    {
+        "merged": "z.z.z.app-merged_res-18:/mipmap-hdpi_icon_foreground.png.flat",
+        "source": "z.z.z.app-main-19:/mipmap-hdpi/icon_foreground.png"
+    }
+]

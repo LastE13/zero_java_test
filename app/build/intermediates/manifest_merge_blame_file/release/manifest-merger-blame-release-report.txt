@@ -1,0 +1,212 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="z.z.z"
+4    android:installLocation="auto"
+5    android:versionCode="1766051081"
+6    android:versionName="1.0" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="21"
+10        android:targetSdkVersion="35" />
+11
+12    <uses-feature
+12-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:45:3-75
+13        android:glEsVersion="0x00030000"
+13-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:45:17-49
+14        android:required="true" />
+14-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:45:50-73
+15    <uses-feature
+15-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:47:3-88
+16        android:name="android.hardware.touchscreen"
+16-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:47:17-60
+17        android:required="false" />
+17-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:47:61-85
+18
+19    <uses-permission android:name="android.permission.WAKE_LOCK" />
+19-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:49:3-66
+19-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:49:20-63
+20    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+20-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:50:3-79
+20-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:50:20-76
+21    <uses-permission android:name="android.permission.VIBRATE" />
+21-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:56:3-64
+21-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:56:20-61
+22    <uses-permission android:name="android.permission.INTERNET" />
+22-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:60:3-65
+22-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:60:20-62
+23    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- Permission will be merged into the manifest of the hosting app. -->
+24    <!-- Is required to launch foreground extraction service for targetSdkVersion 28+. -->
+25    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- Is required to launch foreground extraction service for targetSdkVersion 34+. -->
+25-->[com.google.android.play:asset-delivery:2.2.2] C:\Users\DenielX\.gradle\caches\transforms-3\aa26b2f2e22508e001a553ed46bdffa3\transformed\asset-delivery-2.2.2\AndroidManifest.xml:13:5-77
+25-->[com.google.android.play:asset-delivery:2.2.2] C:\Users\DenielX\.gradle\caches\transforms-3\aa26b2f2e22508e001a553ed46bdffa3\transformed\asset-delivery-2.2.2\AndroidManifest.xml:13:22-74
+26    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+26-->[com.google.android.play:asset-delivery:2.2.2] C:\Users\DenielX\.gradle\caches\transforms-3\aa26b2f2e22508e001a553ed46bdffa3\transformed\asset-delivery-2.2.2\AndroidManifest.xml:15:5-87
+26-->[com.google.android.play:asset-delivery:2.2.2] C:\Users\DenielX\.gradle\caches\transforms-3\aa26b2f2e22508e001a553ed46bdffa3\transformed\asset-delivery-2.2.2\AndroidManifest.xml:15:22-84
+27
+28    <application
+28-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:4:3-43:17
+29        android:allowBackup="true"
+29-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:5:7-33
+30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+30-->[androidx.core:core:1.8.0] C:\Users\DenielX\.gradle\caches\transforms-3\04d714687fba89380c645dca8eb3cec5\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+31        android:extractNativeLibs="true"
+32        android:fullBackupContent="@xml/backup"
+32-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:6:7-46
+33        android:fullBackupOnly="true"
+33-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:7:7-36
+34        android:hardwareAccelerated="true"
+34-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:12:7-41
+35        android:icon="@mipmap/icon"
+35-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:8:7-34
+36        android:isGame="true"
+36-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:10:7-28
+37        android:label="@string/appName"
+37-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:9:7-38
+38        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+38-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:11:7-65
+39        <activity
+39-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:14:5-29:16
+40            android:name="org.renpy.android.PythonSDLActivity"
+40-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:15:9-59
+41            android:alwaysRetainTaskState="true"
+41-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:17:9-45
+42            android:configChanges="layoutDirection|locale|orientation|uiMode|screenLayout|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+42-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:18:9-152
+43            android:exported="true"
+43-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:21:9-32
+44            android:label="@string/iconName"
+44-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:16:9-41
+45            android:launchMode="singleTop"
+45-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:19:9-39
+46            android:screenOrientation="sensor" >
+46-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:20:9-43
+47            <intent-filter>
+47-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:24:9-27:25
+48                <action android:name="android.intent.action.MAIN" />
+48-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:25:13-65
+48-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:25:21-62
+49
+50                <category android:name="android.intent.category.LAUNCHER" />
+50-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:26:13-73
+50-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:26:23-70
+51            </intent-filter>
+52        </activity>
+53
+54        <provider
+54-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:31:5-39:16
+55            android:name="org.renpy.android.RenPyFileProvider"
+55-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:32:9-59
+56            android:authorities="z.z.z.fileprovider"
+56-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:33:9-49
+57            android:exported="false"
+57-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:34:9-33
+58            android:grantUriPermissions="true" >
+58-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:35:9-43
+59            <meta-data
+59-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:36:9-38:50
+60                android:name="android.support.FILE_PROVIDER_PATHS"
+60-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:37:13-63
+61                android:resource="@xml/file_paths" />
+61-->C:\Users\DenielX\Downloads\renpy-8.1.3-sdk\rapt\project\app\src\main\AndroidManifest.xml:38:13-47
+62        </provider>
+63
+64        <!-- The services will be merged into the manifest of the hosting app. -->
+65        <service
+65-->[com.google.android.play:asset-delivery:2.2.2] C:\Users\DenielX\.gradle\caches\transforms-3\aa26b2f2e22508e001a553ed46bdffa3\transformed\asset-delivery-2.2.2\AndroidManifest.xml:20:9-27:19
+66            android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService"
+66-->[com.google.android.play:asset-delivery:2.2.2] C:\Users\DenielX\.gradle\caches\transforms-3\aa26b2f2e22508e001a553ed46bdffa3\transformed\asset-delivery-2.2.2\AndroidManifest.xml:21:13-94
+67            android:enabled="false"
+67-->[com.google.android.play:asset-delivery:2.2.2] C:\Users\DenielX\.gradle\caches\transforms-3\aa26b2f2e22508e001a553ed46bdffa3\transformed\asset-delivery-2.2.2\AndroidManifest.xml:22:13-36
+68            android:exported="true" >
+68-->[com.google.android.play:asset-delivery:2.2.2] C:\Users\DenielX\.gradle\caches\transforms-3\aa26b2f2e22508e001a553ed46bdffa3\transformed\asset-delivery-2.2.2\AndroidManifest.xml:23:13-36
+69            <meta-data
+69-->[com.google.android.play:asset-delivery:2.2.2] C:\Users\DenielX\.gradle\caches\transforms-3\aa26b2f2e22508e001a553ed46bdffa3\transformed\asset-delivery-2.2.2\AndroidManifest.xml:24:13-26:41
+70                android:name="com.google.android.play.core.assetpacks.versionCode"
+70-->[com.google.android.play:asset-delivery:2.2.2] C:\Users\DenielX\.gradle\caches\transforms-3\aa26b2f2e22508e001a553ed46bdffa3\transformed\asset-delivery-2.2.2\AndroidManifest.xml:25:17-83
+71                android:value="20202" />
+71-->[com.google.android.play:asset-delivery:2.2.2] C:\Users\DenielX\.gradle\caches\transforms-3\aa26b2f2e22508e001a553ed46bdffa3\transformed\asset-delivery-2.2.2\AndroidManifest.xml:26:17-38
+72        </service>
+73        <service
+73-->[com.google.android.play:asset-delivery:2.2.2] C:\Users\DenielX\.gradle\caches\transforms-3\aa26b2f2e22508e001a553ed46bdffa3\transformed\asset-delivery-2.2.2\AndroidManifest.xml:28:9-32:56
+74            android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService"
+74-->[com.google.android.play:asset-delivery:2.2.2] C:\Users\DenielX\.gradle\caches\transforms-3\aa26b2f2e22508e001a553ed46bdffa3\transformed\asset-delivery-2.2.2\AndroidManifest.xml:29:13-95
+75            android:enabled="false"
+75-->[com.google.android.play:asset-delivery:2.2.2] C:\Users\DenielX\.gradle\caches\transforms-3\aa26b2f2e22508e001a553ed46bdffa3\transformed\asset-delivery-2.2.2\AndroidManifest.xml:30:13-36
+76            android:exported="false"
+76-->[com.google.android.play:asset-delivery:2.2.2] C:\Users\DenielX\.gradle\caches\transforms-3\aa26b2f2e22508e001a553ed46bdffa3\transformed\asset-delivery-2.2.2\AndroidManifest.xml:31:13-37
+77            android:foregroundServiceType="dataSync" />
+77-->[com.google.android.play:asset-delivery:2.2.2] C:\Users\DenielX\.gradle\caches\transforms-3\aa26b2f2e22508e001a553ed46bdffa3\transformed\asset-delivery-2.2.2\AndroidManifest.xml:32:13-53
+78
+79        <meta-data
+79-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\6e2c9d4d9f72f51b80c5980f768d9c0d\transformed\play-services-basement-18.3.0\AndroidManifest.xml:21:9-23:69
+80            android:name="com.google.android.gms.version"
+80-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\6e2c9d4d9f72f51b80c5980f768d9c0d\transformed\play-services-basement-18.3.0\AndroidManifest.xml:22:13-58
+81            android:value="@integer/google_play_services_version" /> <!-- The activities will be merged into the manifest of the hosting app. -->
+81-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\6e2c9d4d9f72f51b80c5980f768d9c0d\transformed\play-services-basement-18.3.0\AndroidManifest.xml:23:13-66
+82        <activity
+82-->[com.google.android.play:core-common:2.0.3] C:\Users\DenielX\.gradle\caches\transforms-3\74ba65244b34dc9022b9d12d201b15ce\transformed\core-common-2.0.3\AndroidManifest.xml:14:9-18:65
+83            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+83-->[com.google.android.play:core-common:2.0.3] C:\Users\DenielX\.gradle\caches\transforms-3\74ba65244b34dc9022b9d12d201b15ce\transformed\core-common-2.0.3\AndroidManifest.xml:15:13-93
+84            android:exported="false"
+84-->[com.google.android.play:core-common:2.0.3] C:\Users\DenielX\.gradle\caches\transforms-3\74ba65244b34dc9022b9d12d201b15ce\transformed\core-common-2.0.3\AndroidManifest.xml:16:13-37
+85            android:stateNotNeeded="true"
+85-->[com.google.android.play:core-common:2.0.3] C:\Users\DenielX\.gradle\caches\transforms-3\74ba65244b34dc9022b9d12d201b15ce\transformed\core-common-2.0.3\AndroidManifest.xml:17:13-42
+86            android:theme="@style/Theme.PlayCore.Transparent" />
+86-->[com.google.android.play:core-common:2.0.3] C:\Users\DenielX\.gradle\caches\transforms-3\74ba65244b34dc9022b9d12d201b15ce\transformed\core-common-2.0.3\AndroidManifest.xml:18:13-62
+87
+88        <provider
+88-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\92e8251532aef0a688bfdf15bbedba07\transformed\profileinstaller-1.3.0\AndroidManifest.xml:24:9-32:20
+89            android:name="androidx.startup.InitializationProvider"
+89-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\92e8251532aef0a688bfdf15bbedba07\transformed\profileinstaller-1.3.0\AndroidManifest.xml:25:13-67
+90            android:authorities="z.z.z.androidx-startup"
+90-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\92e8251532aef0a688bfdf15bbedba07\transformed\profileinstaller-1.3.0\AndroidManifest.xml:26:13-68
+91            android:exported="false" >
+91-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\92e8251532aef0a688bfdf15bbedba07\transformed\profileinstaller-1.3.0\AndroidManifest.xml:27:13-37
+92            <meta-data
+92-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\92e8251532aef0a688bfdf15bbedba07\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+93                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+93-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\92e8251532aef0a688bfdf15bbedba07\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+94                android:value="androidx.startup" />
+94-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\92e8251532aef0a688bfdf15bbedba07\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+95        </provider>
+96
+97        <receiver
+97-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\92e8251532aef0a688bfdf15bbedba07\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+98            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+98-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\92e8251532aef0a688bfdf15bbedba07\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+99            android:directBootAware="false"
+99-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\92e8251532aef0a688bfdf15bbedba07\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+100            android:enabled="true"
+100-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\92e8251532aef0a688bfdf15bbedba07\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+101            android:exported="true"
+101-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\92e8251532aef0a688bfdf15bbedba07\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+102            android:permission="android.permission.DUMP" >
+102-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\92e8251532aef0a688bfdf15bbedba07\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+103            <intent-filter>
+103-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\92e8251532aef0a688bfdf15bbedba07\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+104                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+104-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\92e8251532aef0a688bfdf15bbedba07\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+104-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\92e8251532aef0a688bfdf15bbedba07\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+105            </intent-filter>
+106            <intent-filter>
+106-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\92e8251532aef0a688bfdf15bbedba07\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+107                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+107-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\92e8251532aef0a688bfdf15bbedba07\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+107-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\92e8251532aef0a688bfdf15bbedba07\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+108            </intent-filter>
+109            <intent-filter>
+109-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\92e8251532aef0a688bfdf15bbedba07\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+110                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+110-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\92e8251532aef0a688bfdf15bbedba07\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+110-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\92e8251532aef0a688bfdf15bbedba07\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+111            </intent-filter>
+112            <intent-filter>
+112-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\92e8251532aef0a688bfdf15bbedba07\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+113                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+113-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\92e8251532aef0a688bfdf15bbedba07\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+113-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\DenielX\.gradle\caches\transforms-3\92e8251532aef0a688bfdf15bbedba07\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+114            </intent-filter>
+115        </receiver>
+116    </application>
+117
+118</manifest>

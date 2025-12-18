@@ -1,0 +1,11 @@
+renpy.alpha renpy.texture
+renpy.ftl
+MakeVisualNovels.Static renpy.geometry renpy.texture
+renpy.texture
+MakeVisualNovels.Static renpy.texture
+renpy.dissolve renpy.dissolve
+renpy.geometry renpy.texture
+renpy.geometry renpy.solid
+renpy.dissolve renpy.geometry
+renpy.alpha renpy.geometry renpy.texture
+renpy.solid

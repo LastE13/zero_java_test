@@ -1,0 +1,14 @@
+R_DEF: Internal format may change without notice
+local
+color colorAccent
+color colorPrimary
+color colorPrimaryDark
+mipmap icon
+mipmap icon_background
+mipmap icon_foreground
+string appName
+string app_name
+string iconName
+string private_version
+style AppTheme
+xml backup

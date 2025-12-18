@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "PROCESSED_RES",
+    "kind": "Directory"
+  },
+  "applicationId": "z.z.z",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 1766051081,
+      "versionName": "1.0",
+      "outputFile": "resources-release.ap_"
+    }
+  ],
+  "elementType": "File"
+}

@@ -1,0 +1,67 @@
+plugins {
+    id 'com.android.application'
+}
+
+
+def localPropertiesFile = rootProject.file("bundle.properties")
+
+
+def localProperties = new Properties()
+localProperties.load(new FileInputStream(localPropertiesFile))
+
+android {
+    compileSdkVersion 35
+
+    namespace "com.saicono.tb"
+
+    defaultConfig {
+        applicationId "com.saicono.tb"
+        minSdkVersion 21
+        targetSdkVersion 35
+        versionCode 1765897111
+        versionName "1.0"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(localProperties["key.store"])
+            storePassword localProperties["key.store.password"]
+            keyAlias localProperties['key.alias']
+            keyPassword localProperties["key.alias.password"]
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            packaging {
+                jniLibs {
+                    keepDebugSymbols = [ "**/*.so" ]
+                }
+            }
+        }
+
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            packaging {
+                jniLibs {
+                    keepDebugSymbols = [ "**/*.so" ]
+                }
+            }
+        }
+    }
+
+
+    assetPacks = [ ":ff1", ":ff2", ":ff3", ":ff4", ":voice_pack" ]
+
+
+    androidResources {
+        noCompress = [ 'ogv', 'avi', 'mpg', 'webm', 'mkv', 'mp4', 'mp3', 'mp2', 'ogg', 'opus', 'flac', 'png', 'jpg', 'jpeg', 'webp', 'avif', 'rpyc', 'rpymc', 'rpyb', ]
+    }
+}
+
+dependencies {
+    implementation project(':renpyandroid')
+
+}
