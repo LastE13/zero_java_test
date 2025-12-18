@@ -313,12 +313,12 @@ public class PythonSDLActivity extends SDLActivity implements AssetPackStateUpda
     boolean checkPack(String name) {
         Log.i("PACK_DEBUG", "Checking pack: " + name);
 
-        // ★★★★ ВРЕМЕННОЕ ИСПРАВЛЕНИЕ ДЛЯ VOICE_PACK ★★★★
+        // ** ВРЕМЕННОЕ ИСПРАВЛЕНИЕ ДЛЯ VOICE_PACK **
         if ("voice_pack".equals(name)) {
             Log.i("PACK_DEBUG", "Skipping check for voice_pack, forcing true");
             return true; // Разблокируем запуск игры
         }
-        // ★★★★ КОНЕЦ ВРЕМЕННОГО ИСПРАВЛЕНИЯ ★★★★
+        // ** КОНЕЦ ВРЕМЕННОГО ИСПРАВЛЕНИЯ **
 
         AssetPackLocation location = mAssetPackManager.getPackLocation(name);
         if (location != null) {
